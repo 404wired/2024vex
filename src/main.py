@@ -191,7 +191,7 @@ class Robot:
             _type_: Created motor.
         """
         motor = vex.Motor(addr, reverse)
-        # motor = Motor55(addr, reverse)
+        #motor = Motor55(addr, reverse)
         # motor = vex.Pwm(addr)
         return motor
 
@@ -418,5 +418,5 @@ while True:
     speed = map_range(controller.axis3.position(), -100.0, 100.0, -1.0, 1.0)
     heading = map_range(controller.axis1.position(), -100.0, 100.0, -1.0, 1.0)
     robot.drive_base_arcade(speed, heading)
-    # robot.print_joystick(brain)
-    vex.wait(50,MSEC)
+    robot.print_joystick(brain)
+    #vex.wait(50,MSEC)
